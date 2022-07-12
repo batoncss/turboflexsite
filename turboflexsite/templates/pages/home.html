@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Главная</title>
+{% endblock %}
+
+{% block body %}
+  <div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Здравствуйте</h1>
+        <p class="col-md-8 fs-4">Рады приветствовать Вас на нашем сайте</p>
+      </div>
+    </div>
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Наш GitHub</h2>
+          <p>Представлены наши pet-проекты</p>
+            <a class="btn btn-outline-light" href="https://github.com/batoncss" role="button">GitHub</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Публикации</h2>
+          <p>Ознакомиться с нашими публикациями педагогической тематики возможно на сайте elibrary.ru</p>
+          <p>SPIN-код автора: 7784-6773</p>
+            <a class="btn btn-outline-light" href="https://elibrary.ru" role="button">elibrary</a>
+        </div>
+      </div>
+{% endblock %}
