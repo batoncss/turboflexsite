@@ -22,7 +22,7 @@ SECRET_KEY = config['keys']['secret_key']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['xn--90aipcokmbjn.xn--p1ai']
 
 
 # Application definition
