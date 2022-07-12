@@ -3,8 +3,8 @@ import os
 import sys
 from pathlib import Path
 
-config = configparser.ConfigParser()  # создаём объекта парсера
-config.read("D:\\projects\\turboflex-site\\settings.ini")  # читаем конфиг
+config = configparser.ConfigParser()  # создаём объект парсера
+config.read("/home/b/batonchw/turbofleks.rf/turboflexsite/turboflexsite/settings.ini")  # читаем конфиг
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
