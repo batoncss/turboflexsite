@@ -8,17 +8,13 @@
 {% block body %}
 <div class="container">
 <h4 class="mb-3">Billing address</h4>
-    <form class="needs-validation" novalidate="">
-        <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
+    <form>
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstName">
         </div>
         <hr class="my-3">
-      <button class="w-10 btn btn-outline-success btn-sm" type="submit">Continue to checkout</button>
+      <button class="w-10 btn btn-outline-success btn-sm submit-form" type="submit" >Continue to checkout</button>
     </form>
+</div>
 {% endblock %}
