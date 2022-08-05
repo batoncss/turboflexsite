@@ -8,14 +8,15 @@ xhttp.onreadystatechange == function(){
 
 
 function myClick() {
+  var json = JSON.stringify({name: document.getElementsByName("Mobilephone")[0].value});
   xhttp.open("POST", "http://127.0.0.1:8000/baton_api/");
   xhttp.setRequestHeader("Content-Type", "application/json");
-  xhttp.setRequestHeader("X-CSRFToken", "qgWDOpdPdKFtAyTt4Ffn8XHYzuPcUQzeuxWP6jRyRM5NbmFiO83g7EeasldHNnwz");  // т окен для неавторизированных пользователей
-  xhttp.send();
-
-
+  xhttp.setRequestHeader("X-CSRFToken", "qgWDOpdPdKFtAyTt4Ffn8XHYzuPcUQzeuxWP6jRyRM5NbmFiO83g7EeasldHNnwz");  // токен для неавторизированных пользователей
+  xhttp.send(json);
   xhttp.onload = function() {
     console.log(xhttp.response);
+    var p;
+    p = document.getElementById('out');
+    p.placeholder = xhttp.response;
   }
-
 }

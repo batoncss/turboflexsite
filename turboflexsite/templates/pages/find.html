@@ -10,11 +10,13 @@
 <h4 class="mb-3">Billing address</h4>
     <form>
         <div class="col-sm-6">
-          <label for="firstName" class="form-label">First name</label>
-          <input type="text" class="form-control" id="firstName">
+          <label for="Mobilephone" class="form-label">Mobile phone</label>
+          <input type="text" class="form-control" name="Mobilephone">
         </div>
+        <br>
+        <button class="w-10 btn btn-outline-success btn-sm submit-form" type="button" >Continue to checkout</button>
         <hr class="my-3">
-      <button class="w-10 btn btn-outline-success btn-sm submit-form" type="submit" >Continue to checkout</button>
+        <input class="form-control" type="text" id="out" placeholder="Readonly input here…" readonly>
     </form>
 </div>
 {% endblock %}
