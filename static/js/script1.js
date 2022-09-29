@@ -1,3 +1,4 @@
+console.log("Hello!")
 document.querySelector(".submit-form").onclick = myClick
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange == function(){
@@ -6,10 +7,9 @@ xhttp.onreadystatechange == function(){
   }
 }
 
-
 function myClick() {
   var json = JSON.stringify({name: document.getElementsByName("Mobilephone")[0].value});
-  xhttp.open("POST", "http://127.0.0.1:8000/baton_api/");
+  xhttp.open("POST", "baton_api/");
   xhttp.setRequestHeader("Content-Type", "application/json");
   xhttp.setRequestHeader("X-CSRFToken", "qgWDOpdPdKFtAyTt4Ffn8XHYzuPcUQzeuxWP6jRyRM5NbmFiO83g7EeasldHNnwz");  // токен для неавторизированных пользователей
   xhttp.send(json);
