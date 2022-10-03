@@ -7,3 +7,7 @@ def page_home(request):
 
 def page_find(request):
     return render(request, 'pages/find.html')
+
+
+def page_camera(request):
+    return render(request, 'pages/camera.html')

@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 config = configparser.ConfigParser()  # создаём объект парсера
-config.read("/home/b/batonchw/turbofleks.rf/turboflexsite/turboflexsite/settings.ini")  # читаем конфиг
+config.read("settings.ini")  # читаем конфиг
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -17,13 +17,15 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config['keys']['secret_key']
+SECRET_KEY, mode_server = config['keys']['secret_key'], config['mode_of_operation']['mode']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['xn--90aipcokmbjn.xn--p1ai']
-
+if mode_server == "0":
+    ALLOWED_HOSTS = ['*']
+elif mode_server == "1":
+    ALLOWED_HOSTS = ['xn--90aipcokmbjn.xn--p1ai']
 
 # Application definition
 
